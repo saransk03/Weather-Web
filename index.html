@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Website | Saran kumar</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="search-bar">
+        <input type="text" placeholder="City Name"/>
+        <button id="btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </div>
+      <div id="w-info">
+        <div class="content">
+          <img id="image" src="./Assests/clear.png" alt="" />
+          <p class="climate">   </p>
+          <p class="temperature">   </p>
+          <p class="city">  </p>
+        </div>
+        <div class="info">
+          <div class="humidity-info">
+            <div class="water">
+              <i class="fa-solid fa-water"></i>
+            </div>
+            <div>
+              <p class="humidity">0%</p>
+              <p class="h-name">Humidity</p>
+            </div>
+            <p></p>
+          </div>
+          <div class="wind-info">
+            <div class="air">
+              <i class="fa-solid fa-wind"></i>
+            </div>
+            <div>
+              <p class="wind">0  Km/Hr</p>
+              <p class="w-name">Wind speed</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="error">
+        <img src="./Assests/error.jpg" alt="">
+        <p>
+          Oops! No Place Found
+        </p>
+      </div>
+    </div>
+
+
+    <script src="./script.js"></script>
+  </body>
+</html>

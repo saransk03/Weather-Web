@@ -19,16 +19,19 @@ const apiUrl ="https://api.openweathermap.org/data/2.5/weather?units=metric&q="
 async function climateData(city){
      
     const response = await fetch(apiUrl + city + '&appid=c40b80e756ffd00e3e25ae6f8217a87d')
-    
 
    if(response.status == 404){
     errorElement.style.visibility = "visible";
     errorElement.style.opacity = 1;
     weatherInfo.style.visibility = "hidden";
-    containerBox.style.height = "450px";
+    
+    if (window.matchMedia("(max-width: 480px)").matches) {
+        containerBox.style.height = "420px"; // Height for mobile screens in error state
+    } else {
+        containerBox.style.height = "450px"; // Height for larger screens in error state
+    }
    }else{
     errorElement.style.visibility = "hidden";
-    containerBox.style.height = "550px";
     weatherInfo.style.visibility = "visible";
     weatherInfo.style.opacity = 1;
     var data = await response.json();
@@ -50,6 +53,15 @@ async function climateData(city){
    }else if(data.weather[0].main == "Clouds"){
     document.getElementById("image").src = "./Assests/overcast.png"
    }
+
+
+    if (window.matchMedia("(max-width: 480px)").matches) {
+        containerBox.style.height = "480px"; // Height for mobile screens
+    } else {
+        containerBox.style.height = "550px"; // Height for larger screens
+    }
+
+    console.log(window.matchMedia("(max-width: 480px)"))
    }
 
    

@@ -48,7 +48,7 @@ async function climateData(city){
     document.getElementById("image").src = "./Assests/cloud.png"
    }else if(data.weather[0].main == "Clear"){
     document.getElementById("image").src = "./Assests/clear.png"
-   }else if(data.weather[0].main == "Haze" || data.weather[0].main =="Smoke"){
+   }else if(data.weather[0].main == "Haze" || data.weather[0].main =="Smoke" || data.weather[0].main == "Mist"){
     document.getElementById("image").src = "./Assests/fog.png"
    }else if(data.weather[0].main == "Clouds"){
     document.getElementById("image").src = "./Assests/overcast.png"

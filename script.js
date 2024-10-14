@@ -52,6 +52,8 @@ async function climateData(city){
     document.getElementById("image").src = "./Assests/fog.png"
    }else if(data.weather[0].main == "Clouds"){
     document.getElementById("image").src = "./Assests/overcast.png"
+   }else if(data.weather[0].main == "Thunderstorm"){
+    document.getElementById("image").src = "./Assests/thunderstorm.png"
    }
 
 
